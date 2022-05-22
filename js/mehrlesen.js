@@ -20,6 +20,24 @@ function wenigerlesenteam1() {
 }
 
 
+function mehrlesenteam2() {
+    howmanyareopen++;
+    // getmargin();
+    document.getElementById("wenigerlesenteam2").style.display = "none";
+    // document.getElementById("contentid").style.paddingBottom = marginB;
+    document.getElementById("mehrlesenteam2").style.display = "block";
+    document.getElementById("team2id").style.marginBottom = "200px";
+}
+
+function wenigerlesenteam2() {
+    howmanyareopen--;
+    // getmargin();
+    document.getElementById("wenigerlesenteam2").style.display = "block";
+    document.getElementById("mehrlesenteam2").style.display = "none";
+    // document.getElementById("contentid").style.paddingBottom = marginB;
+    document.getElementById("team2id").style.marginBottom = "50px";
+}
+
 
 function mehrlesenteam3() {
     howmanyareopen++;
