@@ -20,6 +20,10 @@
     font-family: 'Nanum Myeongjo', serif;
 }
 
+.bold {
+    font-weight: 800;
+}
+
 
 #navcomputer {
     position: relative;
