@@ -1,0 +1,880 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+body {
+    background-color: #f0f0f0;
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+header {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 240px;
+}
+
+.headerimgpc {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.headerimghandy {
+    display: none;
+}
+
+.logoheaderdiv {
+    min-height: 240px;
+    height: 240px;
+    width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logoheader {
+    position: relative;
+    z-index: 3;
+    width: 205px;
+    height: auto;
+    margin-top: 71.225px;
+    margin-bottom: 71.225px;
+}
+
+#navcomputer {
+    position: relative;
+    z-index: 3;
+    background-color: #588c3a;
+    width: 100%;
+    padding-right: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+#navcomputer .navatagpc {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    padding: 20px;
+    color: black;
+    font-size: 120%;
+}
+
+#navcomputer .navatagpc:hover {
+    background-color: #40632b;
+    color: black;
+}
+
+.conentindexcolor {
+    position: relative;
+    z-index: 3;
+    background-color: #f0f0f0;
+}
+
+content {
+    overflow-x: hidden !important;
+    /*position*/
+    position: relative;
+    z-index: 3;
+    /*ENDpositionEND*/
+    /*boxing*/
+    overflow: auto;
+    display: flex;
+    max-width: 1120px;
+    width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    padding-bottom: 0;
+    /*ENDboxingEND*/
+    /*padding*/
+    padding-top: 100px;
+    /*ENDpaddingEND*/
+}
+
+article {
+    /*boxing*/
+    background-color: #f0f0f0;
+    width: 95%;
+    /*    overflow: hidden;*/
+    /*ENDboxingEND*/
+    /*padding*/
+    padding-right: 5px;
+
+    /*ENDpaddingEND*/
+}
+
+.majortitle {
+    text-align: center;
+    /*padding*/
+    padding-bottom: 5px;
+    /*ENDpaddingEND*/
+    font-family: 'Work Sans', sans-serif;
+    font-size: 45px;
+}
+
+.secondtitle {
+    text-align: center;
+    /*padding*/
+    padding-top: 5px;
+    /*ENDpaddingEND*/
+    font-family: 'Playball', cursive;
+    font-size: 35px;
+}
+
+.youtubevideo {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.textundervideo {
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.text1 {
+    width: 661px;
+    height: auto;
+    position: relative;
+    overflow: none !important;
+    text-overflow: none;
+    text-align: left;
+    /* text-align: justify; */
+    /*    letter-spacing: normal;*/
+    /*    word-wrap: break-word;*/
+    /*    white-space: pre-wrap;*/
+    /*    word-break: keep-all;*/
+    margin: 0;
+    line-height: 1.65;
+    font-size: 1.2em;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.text2 {
+    width: 510px;
+    height: auto;
+    position: relative;
+    overflow: none !important;
+    text-overflow: none;
+    text-align: justify;
+    /*    letter-spacing: normal;*/
+    /*    word-wrap: break-word;*/
+    /*    white-space: pre-wrap;*/
+    /*    word-break: keep-all;*/
+    margin: 0;
+    line-height: 1.5;
+    font-size: 17px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+aside {
+    /*boxing*/
+    background-color: #f0f0f0;
+    width: 55%;
+    padding-left: 5%;
+    /*ENDboxingEND*/
+    /*padding*/
+    padding-left: 5px;
+    /*ENDpaddingEND*/
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.contactaside {
+    width: 100%;
+    height: 184px;
+    padding-top: 26.45px;
+}
+
+.anschriftdiv {
+    text-align: right;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+
+.telanschrift {
+    font-size: 20px !important;
+}
+
+.oeffnungszeiten {
+    padding-top: 20px;
+    font-size: 20px !important;
+}
+
+.anschrift {
+    font-size: 15px;
+}
+
+.logoaside {
+    width: 205px;
+    height: 100% !important;
+}
+
+.logoasidediv {
+    display: flex;
+    justify-content: center;
+}
+
+.socialmediadiv {
+    height: 150px;
+    width: 100%;
+    background-color: #4a4a4a;
+}
+
+.socialmedia-inner {
+    /*boxing*/
+    display: flex;
+    max-width: 500px;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    /*ENDboxingEND*/
+}
+
+.socialmedia-inner-inner {
+    margin-bottom: 39px;
+    margin-top: 39px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa {
+    box-sizing: content-box;
+    padding: 20px;
+    font-size: 30px !important;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 100%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    color: white;
+}
+
+footer {
+    /*position*/
+    position: relative;
+    z-index: 3;
+    /*ENDpositionEND*/
+    width: 100%;
+    background-color: #f0f0f0;
+    text-align: justify;
+    /* height: 450px; */
+}
+
+.footerwhite {
+    width: 100%;
+    align-items: end;
+    display: flex;
+}
+
+.footerdogimgdiv {
+    width: 36%;
+    padding-top: 1.5%;
+    min-width: 400px;
+    min-height: 144.333px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.footerdogimg {
+    width: 90%;
+}
+
+.footergreen {
+    display: flex;
+    background-color: #588c3a;
+    height: 59px;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-between;
+}
+
+.copyrightdiv {
+    height: 59px;
+    width: 650.483px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.copyright {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.majoragb {
+    font-size: 30px !important;
+    font-family: 'Work Sans', sans-serif !important;
+}
+
+.logostempeldiv {
+    height: 59px;
+    align-items: center;
+    display: flex;
+}
+
+.logostempel {
+    height: 70%;
+}
+
+#navhandy {
+    display: none;
+}
+
+.impressumspan:hover {
+    border-bottom: solid 1px #fff;
+}
+
+.datenschutzspan:hover {
+    border-bottom: solid 1px #fff;
+}
+
+.copyrightspan:hover {
+    border-bottom: solid 1px #fff;
+}
+
+
+#trennwand {
+    position: relative;
+    z-index: 3;
+    height: 25px;
+    width: 100%;
+    background-color: #4a4a4a;
+}
+
+#bildergaleriepc {
+    position: relative;
+    z-index: 3;
+    height: auto;
+    background-color: #f0f0f0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 1120px;
+    width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#bildergaleriehandy {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: none;
+    position: relative;
+    z-index: 3;
+    height: auto;
+    background-color: #f0f0f0;
+}
+
+.galeriebild {
+    width: 30%;
+    height: 100%;
+    margin: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.w3-left, .w3-right, .w3-badge {
+    cursor: pointer
+}
+
+.w3-badge {
+    height: 20px;
+    width: 20px;
+    padding: 0
+}
+
+
+/*Responsive Nav = change to navhandy div*/
+@media only screen and (max-width : 1120px) {
+    .galeriebild {
+        width: 30%;
+        height: 100%;
+        margin: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #bildergaleriepc {
+        width: 100%;
+    }
+
+    content {
+        display: block;
+        width: 100%;
+        padding-top: 150px;
+    }
+
+    article {
+        width: 100%;
+        height: 100%;
+    }
+
+    aside {
+        background-color: gray;
+        display: grid;
+        justify-items: center;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        height: 100%;
+    }
+
+    .contactaside {
+        justify-content: center;
+        width: 661px;
+        height: 100%;
+    }
+
+    #navcomputer {
+        display: none !important;
+    }
+
+    #navhandy {
+        display: block;
+    }
+
+    /*costomize navhandy inner*/
+    #menuToggle {
+        display: block;
+        position: relative;
+        top: 100px;
+        left: 50px;
+
+        z-index: 4;
+
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .navataghandy {
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    #menuToggle .navataghandy {
+        text-decoration: none;
+        color: #232323;
+
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle .navataghandy:hover {
+        border-radius: 10px;
+        color: white;
+    }
+
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+
+        cursor: pointer;
+
+        opacity: 0;
+        /* hide this */
+        z-index: 5;
+        /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    #menuToggle .navspan {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: black;
+        border-radius: 3px;
+
+        z-index: 4;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    #menuToggle .navspan:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle .navspan:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /* 
+     * Transform all the slices of hamburger
+     * into a crossmark.
+     */
+    #menuToggle input:checked~.navspan {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    /*
+     * But let's hide the middle one.
+     */
+    #menuToggle input:checked~.navspan:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+     * Ohyeah and the last one should go the other direction
+     */
+    #menuToggle input:checked~.navspan:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+     * Make this absolute positioned
+     * at the top left of the screen
+     */
+    #menu {
+        position: absolute;
+
+        width: 300px;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+
+        background: #588c3a;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    /*
+     * And let's slide it in from the left
+     */
+    #menuToggle input:checked~ul {
+        transform: none;
+    }
+}
+
+@media only screen and (max-width : 800px) {
+    #bildergaleriepc {
+        display: none;
+    }
+
+    #bildergaleriehandy {
+        display: block;
+    }
+
+
+    .mySlides {
+        display: none
+    }
+}
+
+@media only screen and (max-width : 510px) {
+    .socialmedia-inner {
+        width: 100%;
+    }
+
+    .socialmedia-inner-inner {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : 510px) {
+    .logostempeldiv {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 580px) {
+    .text1 {
+        width: 661px;
+        height: auto;
+        position: relative;
+        overflow: none !important;
+        text-overflow: none;
+        text-align: left;
+        /*    letter-spacing: normal;*/
+        /*    word-wrap: break-word;*/
+        /*    white-space: pre-wrap;*/
+        /*    word-break: keep-all;*/
+        margin: 0;
+        line-height: 1.65;
+        font-size: 1.2em;
+        font-family: 'Nanum Myeongjo', serif;
+    }
+}
+
+@media only screen and (max-width : 560px) {
+    .copyrightdiv {
+        min-width: 320px;
+        width: 50%;
+    }
+
+    .copyright {
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (max-width : 661px) {
+    .contactaside {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width : 800px) {
+    .copyright {
+        font-size: 2vw;
+    }
+}
+
+
+
+/*Youtube Video*/
+@media only screen and (max-width : 730px) {
+    .youtubevideo {
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding-top: 62.5%;
+        ;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .iframeyt {
+        position: absolute;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .majortitle {
+        font-size: 6.5vw;
+    }
+
+    .secondtitle {
+        font-size: 5vw;
+    }
+
+    .copyrightdiv {
+        width: 50%;
+    }
+
+    .copyright {
+        font-size: 2vw;
+    }
+}
+
+/*responsive nav*/
+@media only screen and (max-width : 730px) {
+    #menu {
+        width: 30%;
+        padding-left: 5%;
+        padding-bottom: 2%;
+    }
+
+    #menu li {
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    #menu {
+        min-width: 168px;
+    }
+
+    #menu li {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width : 730px) {
+    .text1 {
+        word-wrap: break-word;
+    }
+
+    .text2 {
+        word-wrap: break-word;
+    }
+}
+
+@media only screen and (max-width : 1226px) {
+    .logoheaderdiv {
+        width: 900px;
+    }
+
+    .textundervideo {
+        padding-right: 20px;
+        padding-left: 20px;
+        word-wrap: break-word;
+    }
+}
+
+@media only screen and (max-width : 1000px) {
+    .logoheaderdiv {
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width : 900px) {
+    .headerimghandy {
+        display: block;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .headerimgpc {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 850px) {
+    .logoheaderdiv {
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width : 750px) {
+    .logoheaderdiv {
+        display: flex;
+        justify-content: center;
+        width: 210px;
+    }
+}
+
+@media only screen and (max-width : 568px) {
+    .headerimghandy {
+        height: 270px;
+        min-width: 100%;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 578px) {
+    .copyright {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .footerdogimgdiv {
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    .footerwhite {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 1120px) {
+    article {
+        padding-bottom: 100px;
+    }
+}
+
+
+
+#backtotop {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#backtotop::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#backtotop:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#backtotop:active {
+    background-color: #555;
+}
+
+#backtotop.show {
+    opacity: 1;
+    visibility: visible;
+}
