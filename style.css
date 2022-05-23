@@ -623,6 +623,10 @@ footer {
     .mySlides {
         display: none
     }
+
+    .mscss {
+        display: none;
+    }
 }
 
 @media only screen and (max-width : 510px) {
