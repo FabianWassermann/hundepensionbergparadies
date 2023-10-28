@@ -23,7 +23,7 @@ async function holidays() {
       continue; // holiday range is in past
     }
 
-    if (startDate.getTime() == endDate.getTime()) {
+    if (!endDate || startDate.getTime() == endDate.getTime()) {
       rangesDiv.innerHTML += `<div>${startDate.toLocaleString("de-DE", {
         dateStyle: "medium",
       })}</div>`;
