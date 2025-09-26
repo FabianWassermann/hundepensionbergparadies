@@ -109,7 +109,7 @@ article {
     /*    overflow: hidden;*/
     /*ENDboxingEND*/
     /*padding*/
-    padding-right: 5px;
+    /*padding-right: 5px; */
 
     /*ENDpaddingEND*/
 }
@@ -426,6 +426,206 @@ footer {
     padding: 0
 }
 
+/* Styling für Suchfunktion */
+#search-container {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#faq-search {
+    width: 80%;
+    max-width: 600px;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#faq-search:focus {
+    border-color: #588c3a;
+    box-shadow: 0 2px 8px rgba(88, 140, 58, 0.2);
+}
+
+/* Styling für FAQ-Sektionen und Akkordeons */
+.faq-section {
+    margin-bottom: 30px;
+}
+
+.faq-section h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #588c3a;
+    padding-bottom: 5px;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 18px 25px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #eef;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.faq-question::after {
+    content: '\002B';
+    font-size: 1.5em;
+    color: #588c3a;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    content: "\2212"; 
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 25px;
+    background-color: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.faq-answer p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.1em;
+    color: #555;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    line-height: 1.6;
+}
+
+/* Styling für den allgemeinen Informationsblock */
+.general-info-block {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.general-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.general-info-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.general-info-list li:last-child {
+    margin-bottom: 0;
+}
+
+.info-icon {
+    font-size: 1.8em;
+    color: #588c3a;
+    margin-right: 15px;
+    min-width: 35px;
+    width: 35px;
+    text-align: center;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: default;
+    transition: none; 
+}
+
+.info-icon i:hover {
+    color: inherit; 
+    transform: none; 
+}
+
+.general-info-list p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin: 0;
+}
+
+/* Responsives Design Anpassungen */
+@media (max-width: 768px) {
+    .general-info-block {
+        padding: 15px 20px;
+    }
+
+    .general-info-list li {
+        margin-bottom: 15px;
+    }
+
+    .info-icon {
+        font-size: 1.5em;
+        margin-right: 10px;
+        min-width: 30px;
+        width: 30px;
+    }
+
+    .general-info-list p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .general-info-block {
+        padding: 10px 15px;
+    }
+
+    .general-info-list li {
+        margin-bottom: 10px;
+    }
+
+    .info-icon {
+        font-size: 1.3em;
+        margin-right: 8px;
+        min-width: 25px;
+        width: 25px;
+    }
+
+    .general-info-list p {
+        font-size: 0.95em;
+    }
+}
 
 /*Responsive Nav = change to navhandy div*/
 @media only screen and (max-width : 1120px) {
