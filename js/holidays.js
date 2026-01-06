@@ -43,31 +43,26 @@ function getDoc() {
   return new Promise((resolve, reject) => {
     const url =
       "https://sheets.googleapis.com/v4/spreadsheets/" +
-      "1aGQS4ytZh40Wzaj8tkzW_5Ea46OsclTDPg7HxYBqsmE/values/Tabellenblatt1!A:B" +
+      "1jwl626rTkL6CL0mGvreGBbVh-6ajFwN21_HG7UMaQH4/values/Tabellenblatt1!A:B" +
       "?key=" +
-      "AIzaSyAhgBCd442mj_J9HdHGytM7Mi9PUXWgvxo";
+      "AIzaSyBClRUPSR66kIuGZeDK9fWvZ7NS14Kdxi0";
 
     let setOptions = {
       method: "GET",
     };
-    fetch(url, setOptions)
+    fetch(url, { method: "GET" })
       .then((response) => {
-        if (response.ok) {
-          let reader = response.body.getReader();
-          let decoder = new TextDecoder();
-          reader.read().then(function (result) {
-            let data = {};
-            data = decoder.decode(result.value, { stream: !result.done });
-            resolve(JSON.parse(data));
-          });
-        } else {
-          console.log(response);
-          console.log("Response wast not ok");
-          reject(response);
-        }
+        return response.json().then((data) => {
+          if (response.ok) {
+            resolve(data);
+          } else {
+            console.error("Google API Fehler:", data.error.message);
+            reject(data.error);
+          }
+        });
       })
       .catch((error) => {
-        console.log("There is an error " + error.message);
+        console.error("Netzwerk oder Parsing Fehler:", error);
         reject(error);
       });
   });
