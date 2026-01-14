@@ -4,19 +4,15 @@
 }
 
 .preislisteimg {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
     width: 90%;
     margin-bottom: 100px;
-    margin-top: 30px;
+    margin-top: 40px;
     height: 100% !important;
+    transition: box-shadow 0.3s ease;
 }
 
-#navcomputer {
-    position: relative;
-    z-index: 3;
-    background-color: #588c3a;
-    width: 100%;
-    padding-right: 250px !important;
-    display: flex;
-    justify-content: center;
+.preislisteimg:hover {
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
 }

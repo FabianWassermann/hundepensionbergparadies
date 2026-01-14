@@ -1,46 +1,46 @@
 .majorimpressum {
-    padding-top: 26px;
+    padding-top: 30px;
     padding-bottom: 10%;
 }
 
 .impressumdiv {
     display: block;
     padding-left: 5%;
-    padding-bottom: 1%;
+    padding-right: 5%;
+    padding-bottom: 1.5%;
 }
 
 .impressumdivend {
     display: block;
     padding-left: 5%;
+    padding-right: 5%;
     padding-bottom: 5%;
 }
 
 .impressumspan {
     font-size: 18px;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+    color: #444;
 }
 
 .bold {
-    font-weight: 800;
-}
-
-
-#navcomputer {
-    position: relative;
-    z-index: 3;
-    background-color: #588c3a;
-    width: 100%;
-    padding-right: 250px !important;
-    display: flex;
-    justify-content: center;
+    font-weight: 700;
+    color: #333;
 }
 
 /* kontakt */
 #iframemaps {
     border: 0;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-left: 5%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+#iframemaps:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width : 663px) {
@@ -48,8 +48,8 @@
         border: 0;
         margin-top: 30px;
         margin-left: 5%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         width: 90%;
-
     }
 }

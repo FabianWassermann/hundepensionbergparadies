@@ -1,29 +1,41 @@
 document.addEventListener("DOMContentLoaded", holidays, true);
 
 async function holidays() {
+  // Check if popup was already shown today
+  const today = new Date().toDateString();
+  const lastShown = localStorage.getItem('holidayPopupLastShown');
+  
+  if (lastShown === today) {
+    return; // Already shown today, don't show again
+  }
+
   const doc = await getDoc();
   console.log(doc.values);
   if (!doc.values) {
     return;
   }
 
-  const today = new Date();
+  const currentDate = new Date();
 
   document.body.innerHTML += popup;
   const rangesDiv = document.getElementById("holidayRanges");
   rangesDiv.innerHTML = "";
 
+  let hasUpcomingHolidays = false;
+
   for (const row of doc.values) {
     const startDate = new Date(row[0]);
     const endDate = row[1] ? new Date(row[1]) : null;
 
-    if (endDate && endDate.getTime() < today.getTime()) {
+    if (endDate && endDate.getTime() < currentDate.getTime()) {
       continue; // holiday range is in past
-    } else if (startDate.getTime() < today.getTime()) {
-      continue; // holiday range is in past
+    } else if (!endDate && startDate.getTime() < currentDate.getTime()) {
+      continue; // single day holiday is in past
     }
 
-    if (!endDate || startDate.getTime() == endDate.getTime()) {
+    hasUpcomingHolidays = true;
+
+    if (!endDate || startDate.getTime() === endDate.getTime()) {
       rangesDiv.innerHTML += `<div>${startDate.toLocaleString("de-DE", {
         dateStyle: "medium",
       })}</div>`;
@@ -36,7 +48,9 @@ async function holidays() {
     }
   }
 
-  if (rangesDiv.innerHTML == "") closeHoliday();
+  if (!hasUpcomingHolidays || rangesDiv.innerHTML === "") {
+    closeHoliday();
+  }
 }
 
 function getDoc() {
@@ -47,9 +61,6 @@ function getDoc() {
       "?key=" +
       "AIzaSyBClRUPSR66kIuGZeDK9fWvZ7NS14Kdxi0";
 
-    let setOptions = {
-      method: "GET",
-    };
     fetch(url, { method: "GET" })
       .then((response) => {
         return response.json().then((data) => {
@@ -69,67 +80,74 @@ function getDoc() {
 }
 
 function closeHoliday() {
+  const today = new Date().toDateString();
+  localStorage.setItem('holidayPopupLastShown', today);
   document.getElementById("holidayPopup").style.display = "none";
 }
 
 const popup = `
 <div id="holidayPopup" style="
   position: fixed; 
-  z-index: 1000;
-  right: 0;
-  left: 0; 
-  bottom: 0; 
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; 
-  padding-bottom: 1.5rem; 
-  pointer-events: none; 
+  z-index: 9999;
+  right: 20px;
+  left: auto; 
+  bottom: 20px; 
+  max-width: 400px;
+  pointer-events: auto; 
   font-family: Verdana, sans-serif;
 ">
-  <div style="padding: 1.5rem; 
+  <div style="
+    padding: 1.5rem; 
     border-radius: 0.75rem; 
-    box-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color); 
-    max-width: 36rem; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1); 
     background-color: #ffffff; 
-    pointer-events: auto; 
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    border-left: 4px solid #588c3a;
   ">
-    <p style="font-size: 0.875rem;
-      line-height: 1.25rem; 
+    <p style="
+      font-size: 0.95rem;
       line-height: 1.5rem; 
       color: #111827; 
-      margin-bottom: 0.5rem;
+      margin: 0 0 0.75rem 0;
+      font-weight: 600;
     ">
-      Achtung, bitte beachten! In folgenden Zeiträumen ist die Hundepension geschlossen:
+      ⚠️ Achtung, bitte beachten!
     </p>
-    <div id="holidayRanges" style="font-size: 0.875rem;
-      line-height: 1.25rem; 
+    <p style="
+      font-size: 0.875rem;
+      line-height: 1.4rem; 
+      color: #374151; 
+      margin: 0 0 0.5rem 0;
+    ">
+      In folgenden Zeiträumen ist die Hundepension geschlossen:
+    </p>
+    <div id="holidayRanges" style="
+      font-size: 0.875rem;
       line-height: 1.5rem; 
-      color: #111827; 
+      color: #111827;
+      font-weight: 500;
+      margin-bottom: 1rem;
     ">
     </div>
-    <div style="display: flex; 
-      margin-top: 1rem; 
-      column-gap: 1.25rem; 
-      align-items: center; 
+    <div style="
+      display: flex; 
+      justify-content: flex-end;
     ">
-      <button type="button" style="padding-top: 0.5rem;
-        padding-bottom: 0.5rem; 
-        padding-left: 0.75rem;
-        padding-right: 0.75rem; 
+      <button type="button" style="
+        padding: 0.5rem 1rem;
         border-radius: 0.375rem; 
         font-size: 0.875rem;
-        line-height: 1.25rem; 
         font-weight: 600; 
         color: #ffffff; 
-        background-color: #111827; 
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); 
-        
-        :hover {
-        background-color: #374151; 
-      }"
+        background-color: #588c3a; 
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      "
+      onmouseover="this.style.backgroundColor='#40632b'"
+      onmouseout="this.style.backgroundColor='#588c3a'"
       onclick="closeHoliday()"
       >
-        Schließen
+        Verstanden
       </button>
     </div>
   </div>

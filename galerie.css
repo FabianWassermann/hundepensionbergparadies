@@ -1,5 +1,6 @@
 #galerie-wrapper {
   padding-top: 100px;
+  padding-bottom: 60px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -23,6 +24,15 @@
 
 .gallery figure {
   margin: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .gallery__img {
@@ -30,6 +40,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery figure:hover .gallery__img {
+  transform: scale(1.05);
 }
 
 .gallery__item--1 {
@@ -37,10 +52,6 @@
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
-
-  /** Alternative Syntax **/
-  /* grid-column: 1 / span 2;  */
-  /* grid-row: 1 / span 2; */
 }
 
 .gallery__item--2 {
@@ -48,10 +59,6 @@
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 3;
-
-  /** Alternative Syntax **/
-  /* grid-column: 3 / span 2;  */
-  /* grid-row: 1 / span 2; */
 }
 
 .gallery__item--3 {
@@ -59,10 +66,6 @@
   grid-column-end: 9;
   grid-row-start: 1;
   grid-row-end: 6;
-
-  /** Alternative Syntax **/
-  /* grid-column: 5 / span 4;
-  grid-row: 1 / span 5; */
 }
 
 .gallery__item--4 {
@@ -70,10 +73,6 @@
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 6;
-
-  /** Alternative Syntax **/
-  /* grid-column: 1 / span 4;  */
-  /* grid-row: 3 / span 3; */
 }
 
 .gallery__item--5 {
@@ -81,10 +80,6 @@
   grid-column-end: 5;
   grid-row-start: 6;
   grid-row-end: 9;
-
-  /** Alternative Syntax **/
-  /* grid-column: 1 / span 4; */
-  /* grid-row: 6 / span 3; */
 }
 
 .gallery__item--6 {
@@ -92,10 +87,6 @@
   grid-column-end: 9;
   grid-row-start: 6;
   grid-row-end: 9;
-
-  /** Alternative Syntax **/
-  /* grid-column: 5 / span 4; */
-  /* grid-row: 6 / span 3; */
 }
 
 @media only screen and (max-width : 1200px) {
@@ -103,7 +94,21 @@
     display: none !important;
   }
 
-  #bildergaleriehandy {
+  .bildergaleriehandy,
+  #bildergaleriehandy,
+  #bildergaleriehandy1,
+  #bildergaleriehandy2,
+  #bildergaleriehandy3 {
     display: block !important;
   }
+}
+
+/* Gallery slider containers */
+.w3-content.w3-display-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.mySlides1, .mySlides2, .mySlides3 {
+  transition: opacity 0.5s ease-in-out;
 }

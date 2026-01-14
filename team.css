@@ -4,30 +4,43 @@
 
 .team1 {
     display: flex;
-    height: 210px;
+    min-height: 210px;
+    height: auto;
     margin-right: 20px;
     margin-left: 10px;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .roundimgdiv1 {
-    width: 200px;
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
     margin: 5px;
+    flex-shrink: 0;
 }
 
 .roundimg1 {
     width: 100%;
-    border-radius: 500px;
     height: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roundimg1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .persontext1 {
     padding-left: 20px;
-    padding-right: 40px;
-    width: 563.883px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-right: 20px;
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
     display: block;
     justify-content: center;
     -webkit-hyphens: auto;
@@ -38,33 +51,45 @@
 
 .team2 {
     display: flex;
-    height: 210px;
+    min-height: 210px;
+    height: auto;
     margin-right: 10px;
     margin-bottom: 50px;
     margin-left: 10px;
     margin-top: 50px;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .roundimgdiv2 {
-    width: 200px;
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
     margin: 5px;
+    flex-shrink: 0;
 }
 
 .roundimg2 {
     width: 100%;
-    border-radius: 500px;
     height: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    z-index: 5;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roundimg2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .persontext2 {
-    padding-left: 40px;
+    padding-left: 20px;
     padding-right: 20px;
-    width: 563.883px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
     display: block;
     justify-content: center;
     -webkit-hyphens: auto;
@@ -76,45 +101,60 @@
 .persontext2mehranzeigen {
     padding-left: 40px;
     padding-right: 20px;
-    width: 563.883px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
     display: none;
     justify-content: center;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
-    height: 210px;
+    position: relative;
+    z-index: 10;
 }
 
 
 .team3 {
     display: flex;
-    height: 210px;
+    min-height: 210px;
+    height: auto;
     margin-right: 20px;
     margin-left: 10px;
     margin-bottom: 100px;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .roundimgdiv3 {
-    width: 200px;
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
     margin: 5px;
+    flex-shrink: 0;
 }
 
 .roundimg3 {
     width: 100%;
-    border-radius: 500px;
     height: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roundimg3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .persontext3 {
     padding-left: 20px;
-    padding-right: 40px;
-    width: 563.883px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-right: 20px;
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
     display: block;
     justify-content: center;
     -webkit-hyphens: auto;
@@ -125,30 +165,34 @@
 .persontext3mehranzeigen {
     padding-left: 20px;
     padding-right: 40px;
-    width: 563.883px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
     display: none;
     justify-content: center;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
-    height: 210px;
+    position: relative;
+    z-index: 10;
 }
 
 
 .persontext1mehranzeigen {
     padding-left: 20px;
     padding-right: 40px;
-    width: 563.883px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
     display: none;
     justify-content: center;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
-    height: 210px;
+    position: relative;
+    z-index: 10;
 }
 
 .team2handy {
@@ -157,12 +201,18 @@
 
 .mehranzeigenbutton {
     border: none;
-    color: gray;
-    font-family: 'Nanum Myeongjo', serif;
+    color: #666;
+    font-family: Georgia, 'Times New Roman', serif;
+    background: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
 }
 
 .mehranzeigenbutton:hover {
-    border-bottom: 1px solid gray;
+    background-color: #f0f7ed;
+    color: #588c3a;
 }
 
 
@@ -299,17 +349,6 @@
     }
 }
 
-
-
-#navcomputer {
-    position: relative;
-    z-index: 3;
-    background-color: #588c3a;
-    width: 100%;
-    padding-right: 250px !important;
-    display: flex;
-    justify-content: center;
-}
 
 #secondtitlehandy {
     display: none;
