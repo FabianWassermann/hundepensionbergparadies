@@ -1,652 +1,277 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Galerie | Hundepension-Bergparadies</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css?v=1" />
-    <link rel="stylesheet" href="galerie.css?v=1" />
+  <title>Galerie | Hundepension-Bergparadies</title>
 
-    <!--Icon Title-->
-    <link
-      rel="icon"
-      href="./img/logo/Hundepension_Logo_Stempel.png"
-      type="image/x-icon"
-    />
-    <!--Link for SocialMedia Fonts-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!--Font-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Playball&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="stylesheet" href="galerie.css?v=1" />
 
-    <script src="./js/headerimgtimeslider.js"></script>
-    <script src="./js/imgslidergalerie.js"></script>
-    <script src="./js/holidays.js"></script>
+  <!--Icon Title-->
+  <link rel="icon" href="./img/logo/Hundepension_Logo_Stempel.png" type="image/x-icon" />
+  <!--Link for SocialMedia Fonts-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!--Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Playball&display=swap"
+    rel="stylesheet" />
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-T4EBWZ3GVJ"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+  <script src="./js/headerimgtimeslider.js"></script>
+  <script src="./js/imgslidergalerie.js"></script>
+  <script src="./js/holidays.js"></script>
 
-      gtag("config", "G-T4EBWZ3GVJ");
-    </script>
-  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4EBWZ3GVJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <body>
-    <header>
-      <img
-        id="refimgpc"
-        class="headerimgpc"
-        src="./img/homepage-topimg/1-pc.png"
-      />
-      <img
-        id="refimghandy"
-        class="headerimghandy"
-        src="./img/homepage-topimg/1-handy.png"
-      />
-      <div class="logoheaderdiv">
-        <img
-          class="logoheader"
-          src="./img/logo/Logo-Bergparadies-NoBackground.png"
-        />
+    gtag("config", "G-T4EBWZ3GVJ");
+  </script>
+</head>
+
+<body>
+  <header>
+    <img id="refimgpc" class="headerimgpc" src="./img/homepage-topimg/1-pc.png" />
+    <img id="refimghandy" class="headerimghandy" src="./img/homepage-topimg/1-handy.png" />
+    <div class="logoheaderdiv">
+      <img class="logoheader" src="./img/logo/Logo-Bergparadies-NoBackground.png" />
+    </div>
+  </header>
+  <nav id="navhandy">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <img class="navlogo" src="./img/logo/Logo-Bergparadies-NoBackground.png" alt="Logo" />
+      <span class="navspan"></span>
+      <span class="navspan"></span>
+      <span class="navspan"></span>
+      <ul id="menu">
+        <a class="navataghandy" href="./index.html">
+          <li><i class="fa fa-home"></i> Startseite</li>
+        </a>
+        <a class="navataghandy" href="./team.html">
+          <li><i class="fa fa-users"></i> Team</li>
+        </a>
+        <a class="navataghandy" href="./kontakt.html">
+          <li><i class="fa fa-envelope"></i> Kontakt</li>
+        </a>
+        <a class="navataghandy" href="./preise.html">
+          <li><i class="fa fa-euro"></i> Preise</li>
+        </a>
+        <a class="navataghandy" href="./galerie.html">
+          <li><i class="fa fa-camera"></i> Galerie</li>
+        </a>
+        <a class="navataghandy" href="./haeufige-fragen.html">
+          <li><i class="fa fa-question"></i> Häufige Fragen</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+  <nav id="navcomputer">
+    <a class="navatagpc" href="./index.html">Startseite</a>
+    <a class="navatagpc" href="./team.html">Team</a>
+    <a class="navatagpc" href="./kontakt.html">Kontakt</a>
+    <a class="navatagpc" href="./preise.html">Preise</a>
+    <a class="navatagpc" href="./galerie.html">Galerie</a>
+    <a class="navatagpc" href="./haeufige-fragen.html">Häufige Fragen</a>
+  </nav>
+  <div class="conentindexcolor">
+    <div id="galerie-wrapper">
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+          <img src="img/galerie/galerie (1).jpg" alt="Gallery image 1" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img src="img/galerie/galerie (3).jpg" alt="Gallery image 2" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img src="img/galerie/galerie (4).jpg" alt="Gallery image 3" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img src="img/galerie/galerie (5).jpg" alt="Gallery image 4" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img src="img/galerie/galerie (8).jpg" alt="Gallery image 5" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img src="img/galerie/galerie (18).jpg" alt="Gallery image 6" class="gallery__img" />
+        </figure>
       </div>
-    </header>
-    <nav id="navhandy">
-      <div id="menuToggle">
-        <input type="checkbox" />
-        <img class="navlogo" src="./img/logo/Logo-Bergparadies-NoBackground.png" alt="Logo" />
-        <span class="navspan"></span>
-        <span class="navspan"></span>
-        <span class="navspan"></span>
-        <ul id="menu">
-          <a class="navataghandy" href="./index.html">
-            <li><i class="fa fa-home"></i> Startseite</li>
-          </a>
-          <a class="navataghandy" href="./team.html">
-            <li><i class="fa fa-users"></i> Team</li>
-          </a>
-          <a class="navataghandy" href="./kontakt.html">
-            <li><i class="fa fa-envelope"></i> Kontakt</li>
-          </a>
-          <a class="navataghandy" href="./preise.html">
-            <li><i class="fa fa-euro"></i> Preise</li>
-          </a>
-          <a class="navataghandy" href="./galerie.html">
-            <li><i class="fa fa-camera"></i> Galerie</li>
-          </a>
-          <a class="navataghandy" href="./haeufige-fragen.html">
-            <li><i class="fa fa-question"></i> Häufige Fragen</li>
-          </a>
-        </ul>
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+          <img src="img/galerie/galerie (10).jpg" alt="Gallery image 1" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img src="img/galerie/galerie (11).jpg" alt="Gallery image 2" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img src="img/galerie/galerie (12).jpg" alt="Gallery image 3" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img src="img/galerie/galerie (13).jpg" alt="Gallery image 4" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img src="img/galerie/galerie (15).jpg" alt="Gallery image 5" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img src="img/galerie/galerie (19).jpg" alt="Gallery image 6" class="gallery__img" />
+        </figure>
       </div>
-    </nav>
-    <nav id="navcomputer">
-      <a class="navatagpc" href="./index.html">Startseite</a>
-      <a class="navatagpc" href="./team.html">Team</a>
-      <a class="navatagpc" href="./kontakt.html">Kontakt</a>
-      <a class="navatagpc" href="./preise.html">Preise</a>
-      <a class="navatagpc" href="./galerie.html">Galerie</a>
-      <a class="navatagpc" href="./haeufige-fragen.html">Häufige Fragen</a>
-    </nav>
-    <div class="conentindexcolor">
-      <div id="galerie-wrapper">
-        <div class="gallery">
-          <figure class="gallery__item gallery__item--1">
-            <img
-              src="img/galerie/galerie (1).jpg"
-              alt="Gallery image 1"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--2">
-            <img
-              src="img/galerie/galerie (3).jpg"
-              alt="Gallery image 2"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--3">
-            <img
-              src="img/galerie/galerie (4).jpg"
-              alt="Gallery image 3"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--4">
-            <img
-              src="img/galerie/galerie (5).jpg"
-              alt="Gallery image 4"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--5">
-            <img
-              src="img/galerie/galerie (8).jpg"
-              alt="Gallery image 5"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--6">
-            <img
-              src="img/galerie/galerie (18).jpg"
-              alt="Gallery image 6"
-              class="gallery__img"
-            />
-          </figure>
-        </div>
-        <div class="gallery">
-          <figure class="gallery__item gallery__item--1">
-            <img
-              src="img/galerie/galerie (10).jpg"
-              alt="Gallery image 1"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--2">
-            <img
-              src="img/galerie/galerie (11).jpg"
-              alt="Gallery image 2"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--3">
-            <img
-              src="img/galerie/galerie (12).jpg"
-              alt="Gallery image 3"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--4">
-            <img
-              src="img/galerie/galerie (13).jpg"
-              alt="Gallery image 4"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--5">
-            <img
-              src="img/galerie/galerie (15).jpg"
-              alt="Gallery image 5"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--6">
-            <img
-              src="img/galerie/galerie (19).jpg"
-              alt="Gallery image 6"
-              class="gallery__img"
-            />
-          </figure>
-        </div>
-        <div class="gallery">
-          <figure class="gallery__item gallery__item--1">
-            <img
-              src="img/galerie/galerie (20).jpg"
-              alt="Gallery image 1"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--2">
-            <img
-              src="img/galerie/galerie (21).jpg"
-              alt="Gallery image 2"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--3">
-            <img
-              src="img/galerie/galerie (22).jpg"
-              alt="Gallery image 3"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--4">
-            <img
-              src="img/galerie/galerie (23).jpg"
-              alt="Gallery image 4"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--5">
-            <img
-              src="img/galerie/galerie (24).jpg"
-              alt="Gallery image 5"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--6">
-            <img
-              src="img/galerie/galerie (25).jpg"
-              alt="Gallery image 6"
-              class="gallery__img"
-            />
-          </figure>
-        </div>
-        <div class="gallery">
-          <figure class="gallery__item gallery__item--1">
-            <img
-              src="img/galerie/galerie (26).jpg"
-              alt="Gallery image 1"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--2">
-            <img
-              src="img/galerie/galerie (27).jpg"
-              alt="Gallery image 2"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--3">
-            <img
-              src="img/galerie/galerie (28).jpg"
-              alt="Gallery image 3"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--4">
-            <img
-              src="img/galerie/galerie (29).jpg"
-              alt="Gallery image 4"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--5">
-            <img
-              src="img/galerie/galerie (30).jpg"
-              alt="Gallery image 5"
-              class="gallery__img"
-            />
-          </figure>
-          <figure class="gallery__item gallery__item--6">
-            <img
-              src="img/galerie/galerie (31).jpg"
-              alt="Gallery image 6"
-              class="gallery__img"
-            />
-          </figure>
-        </div>
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+          <img src="img/galerie/galerie (20).jpg" alt="Gallery image 1" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img src="img/galerie/galerie (21).jpg" alt="Gallery image 2" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img src="img/galerie/galerie (22).jpg" alt="Gallery image 3" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img src="img/galerie/galerie (23).jpg" alt="Gallery image 4" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img src="img/galerie/galerie (24).jpg" alt="Gallery image 5" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img src="img/galerie/galerie (25).jpg" alt="Gallery image 6" class="gallery__img" />
+        </figure>
+      </div>
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+          <img src="img/galerie/galerie (26).jpg" alt="Gallery image 1" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img src="img/galerie/galerie (27).jpg" alt="Gallery image 2" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img src="img/galerie/galerie (28).jpg" alt="Gallery image 3" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img src="img/galerie/galerie (29).jpg" alt="Gallery image 4" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img src="img/galerie/galerie (30).jpg" alt="Gallery image 5" class="gallery__img" />
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img src="img/galerie/galerie (31).jpg" alt="Gallery image 6" class="gallery__img" />
+        </figure>
+      </div>
 
-        <div id="bildergaleriehandy1" class="bildergaleriehandy">
-          <h1 class="majortitle">Innenraum</h1>
-          <div class="w3-content w3-display-container" style="max-width: 95%">
-            <img
-              class="mscss mySlides1 first"
-              src="./img/galerie/galerie (1).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides1"
-              src="./img/galerie/galerie (3).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides1"
-              src="./img/galerie/galerie (4).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides1"
-              src="./img/galerie/galerie (5).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides1"
-              src="./img/galerie/galerie (8).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides1"
-              src="./img/galerie/galerie (18).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides1"
-              src="./img/galerie/galerie (17).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides1"
-              src="./img/galerie/galerie (9).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <div
-              class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
-              style="width: 100%; height: auto"
-            >
-              <div
-                class="w3-left w3-hover-text-khaki"
-                onclick="plusDivs(-1, 1)"
-              >
-                &#10094;
-              </div>
-              <div
-                class="w3-right w3-hover-text-khaki"
-                onclick="plusDivs(1, 1)"
-              >
-                &#10095;
-              </div>
-              <span
-                class="w3-badge demo1 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(1, 1)"
-              ></span>
-              <span
-                class="w3-badge demo1 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(2, 1)"
-              ></span>
-              <span
-                class="w3-badge demo1 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(3, 1)"
-              ></span>
-              <span
-                class="w3-badge demo1 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(4, 1)"
-              ></span>
-              <span
-                class="w3-badge demo1 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(5, 1)"
-              ></span>
-              <span
-                class="w3-badge demo1 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(6, 1)"
-              ></span>
-              <span
-                class="w3-badge demo1 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(7, 1)"
-              ></span>
-              <span
-                class="w3-badge demo1 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(8, 1)"
-              ></span>
+      <div id="bildergaleriehandy1" class="bildergaleriehandy">
+        <h1 class="majortitle">Innenraum</h1>
+        <div class="w3-content w3-display-container" style="max-width: 95%">
+          <img class="mscss mySlides1 first" src="./img/galerie/galerie (1).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides1" src="./img/galerie/galerie (3).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides1" src="./img/galerie/galerie (4).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides1" src="./img/galerie/galerie (5).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides1" src="./img/galerie/galerie (8).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides1" src="./img/galerie/galerie (18).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides1" src="./img/galerie/galerie (17).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides1" src="./img/galerie/galerie (9).jpg" style="width: 100%; height: 100%" />
+          <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+            style="width: 100%; height: auto">
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1, 1)">
+              &#10094;
             </div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1, 1)">
+              &#10095;
+            </div>
+            <span class="w3-badge demo1 w3-border w3-transparent w3-hover-white" onclick="currentDiv(1, 1)"></span>
+            <span class="w3-badge demo1 w3-border w3-transparent w3-hover-white" onclick="currentDiv(2, 1)"></span>
+            <span class="w3-badge demo1 w3-border w3-transparent w3-hover-white" onclick="currentDiv(3, 1)"></span>
+            <span class="w3-badge demo1 w3-border w3-transparent w3-hover-white" onclick="currentDiv(4, 1)"></span>
+            <span class="w3-badge demo1 w3-border w3-transparent w3-hover-white" onclick="currentDiv(5, 1)"></span>
+            <span class="w3-badge demo1 w3-border w3-transparent w3-hover-white" onclick="currentDiv(6, 1)"></span>
+            <span class="w3-badge demo1 w3-border w3-transparent w3-hover-white" onclick="currentDiv(7, 1)"></span>
+            <span class="w3-badge demo1 w3-border w3-transparent w3-hover-white" onclick="currentDiv(8, 1)"></span>
           </div>
         </div>
-        <div id="bildergaleriehandy2" class="bildergaleriehandy">
-          <h1 class="majortitle">Außenbereich</h1>
-          <div class="w3-content w3-display-container" style="max-width: 95%">
-            <img
-              class="mscss mySlides2 first"
-              src="./img/galerie/galerie (10).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides2"
-              src="./img/galerie/galerie (11).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides2"
-              src="./img/galerie/galerie (12).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides2"
-              src="./img/galerie/galerie (13).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides2"
-              src="./img/galerie/galerie (15).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides2"
-              src="./img/galerie/galerie (20).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides2"
-              src="./img/galerie/galerie (21).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides2"
-              src="./img/galerie/galerie (22).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <div
-              class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
-              style="width: 100%; height: auto"
-            >
-              <div
-                class="w3-left w3-hover-text-khaki"
-                onclick="plusDivs(-1, 2)"
-              >
-                &#10094;
-              </div>
-              <div
-                class="w3-right w3-hover-text-khaki"
-                onclick="plusDivs(1, 2)"
-              >
-                &#10095;
-              </div>
-              <span
-                class="w3-badge demo2 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(1, 2)"
-              ></span>
-              <span
-                class="w3-badge demo2 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(2, 2)"
-              ></span>
-              <span
-                class="w3-badge demo2 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(3, 2)"
-              ></span>
-              <span
-                class="w3-badge demo2 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(4, 2)"
-              ></span>
-              <span
-                class="w3-badge demo2 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(5, 2)"
-              ></span>
-              <span
-                class="w3-badge demo2 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(6, 2)"
-              ></span>
-              <span
-                class="w3-badge demo2 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(7, 2)"
-              ></span>
-              <span
-                class="w3-badge demo2 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(8, 2)"
-              ></span>
-            </div>
-          </div>
-        </div>
-        <div id="bildergaleriehandy3" class="bildergaleriehandy">
-          <div class="w3-content w3-display-container" style="max-width: 95%">
-            <img
-              class="mscss mySlides3 first"
-              src="./img/galerie/galerie (23).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides3"
-              src="./img/galerie/galerie (24).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides3"
-              src="./img/galerie/galerie (25).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides3"
-              src="./img/galerie/galerie (26).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides3"
-              src="./img/galerie/galerie (27).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides3"
-              src="./img/galerie/galerie (28).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides3"
-              src="./img/galerie/galerie (29).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <img
-              class="mscss mySlides3"
-              src="./img/galerie/galerie (30).jpg"
-              style="width: 100%; height: 100%"
-            />
-            <div
-              class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
-              style="width: 100%; height: auto"
-            >
-              <div
-                class="w3-left w3-hover-text-khaki"
-                onclick="plusDivs(-1, 3)"
-              >
-                &#10094;
-              </div>
-              <div
-                class="w3-right w3-hover-text-khaki"
-                onclick="plusDivs(1, 3)"
-              >
-                &#10095;
-              </div>
-              <span
-                class="w3-badge demo3 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(1, 3)"
-              ></span>
-              <span
-                class="w3-badge demo3 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(2, 3)"
-              ></span>
-              <span
-                class="w3-badge demo3 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(3, 3)"
-              ></span>
-              <span
-                class="w3-badge demo3 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(4, 3)"
-              ></span>
-              <span
-                class="w3-badge demo3 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(5, 3)"
-              ></span>
-              <span
-                class="w3-badge demo3 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(6, 3)"
-              ></span>
-              <span
-                class="w3-badge demo3 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(7, 3)"
-              ></span>
-              <span
-                class="w3-badge demo3 w3-border w3-transparent w3-hover-white"
-                onclick="currentDiv(8, 3)"
-              ></span>
-            </div>
+      </div>
+      <div id="bildergaleriehandy2" class="bildergaleriehandy">
+        <h1 class="majortitle">Außenbereich</h1>
+        <div class="w3-content w3-display-container" style="max-width: 95%">
+          <img class="mscss mySlides2 first" src="./img/galerie/galerie (11).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides2" src="./img/galerie/galerie (15).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides2" src="./img/galerie/galerie (21).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides2" src="./img/galerie/galerie (23).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides2" src="./img/galerie/galerie (24).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides2" src="./img/galerie/galerie (25).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides2" src="./img/galerie/galerie (26).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides2" src="./img/galerie/galerie (27).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides2" src="./img/galerie/galerie (28).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides2" src="./img/galerie/galerie (29).jpg" style="width: 100%; height: 100%" />
+          <img class="mscss mySlides2" src="./img/galerie/galerie (30).jpg" style="width: 100%; height: 100%" />
+          <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+            style="width: 100%; height: auto">
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1, 2)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1, 2)">&#10095;</div>
+
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(1, 2)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(2, 2)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(3, 2)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(4, 2)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(5, 2)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(6, 2)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(7, 2)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(8, 2)"></span>
+
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(9, 2)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(10, 2)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv(11, 2)"></span>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer>
-      <div class="socialmediadiv">
-        <div class="socialmedia-inner">
-          <div class="socialmedia-inner-inner">
-            <a
-              href="https://www.youtube.com/channel/UCEYJ7imJmUSZiN_Wohg1nhw"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="fa fa-youtube"
-            ></a>
-            <a
-              href="https://www.instagram.com/hundepension_bergparadies"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="fa fa-instagram"
-            ></a>
-            <a
-              href="https://www.facebook.com/Bergparadies/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="fa fa-facebook"
-            ></a>
-          </div>
+  <footer>
+    <div class="socialmediadiv">
+      <div class="socialmedia-inner">
+        <div class="socialmedia-inner-inner">
+          <a href="https://www.youtube.com/channel/UCEYJ7imJmUSZiN_Wohg1nhw" target="_blank" rel="noopener noreferrer"
+            class="fa fa-youtube"></a>
+          <a href="https://www.instagram.com/hundepension_bergparadies" target="_blank" rel="noopener noreferrer"
+            class="fa fa-instagram"></a>
+          <a href="https://www.facebook.com/Bergparadies/" target="_blank" rel="noopener noreferrer"
+            class="fa fa-facebook"></a>
         </div>
-      </div>
-      <div class="footerwhite">
-        <div class="footerdogimgdiv">
-          <img
-            class="footerdogimg"
-            src="./img/footer/dog-footer-nobackground.png"
-          />
-        </div>
-        <div class="footermiddlediv"></div>
-        <div class="footerrightdiv"></div>
-      </div>
-    </footer>
-    <div class="footergreen">
-      <div class="copyrightdiv">
-        <span class="copyright"
-          >&#169; 2020 Hundepension-Bergparadies &nbsp;&nbsp; <br /><a
-            style="text-decoration: none"
-            href="./impressum.html"
-            ><span class="footerlink" style="color: white"
-              >IMPRESSUM</span
-            ></a
-          >
-          |
-          <a style="text-decoration: none" href="./datenschutz.html"
-            ><span class="footerlink" style="color: white"
-              >DATENSCHUTZ</span
-            ></a
-          >
-          |
-          <a style="text-decoration: none" href="./copyright.html"
-            ><span class="footerlink" style="color: white"
-              >COPYRIGHT</span
-            ></a
-          >
-          |
-          <a style="text-decoration: none" href="./agb.html"
-            ><span class="footerlink" style="color: white">AGBs</span></a
-          ></span
-        >
-      </div>
-      <div class="logostempeldiv">
-        <img
-          class="logostempel"
-          src="./img/logo/Hundepension_Logo_Stempel.png"
-        />
       </div>
     </div>
-  </body>
+    <div class="footerwhite">
+      <div class="footerdogimgdiv">
+        <img class="footerdogimg" src="./img/footer/dog-footer-nobackground.png" />
+      </div>
+      <div class="footermiddlediv"></div>
+      <div class="footerrightdiv"></div>
+    </div>
+  </footer>
+  <div class="footergreen">
+    <div class="copyrightdiv">
+      <span class="copyright">&#169; 2020 Hundepension-Bergparadies &nbsp;&nbsp; <br /><a style="text-decoration: none"
+          href="./impressum.html"><span class="footerlink" style="color: white">IMPRESSUM</span></a>
+        |
+        <a style="text-decoration: none" href="./datenschutz.html"><span class="footerlink"
+            style="color: white">DATENSCHUTZ</span></a>
+        |
+        <a style="text-decoration: none" href="./copyright.html"><span class="footerlink"
+            style="color: white">COPYRIGHT</span></a>
+        |
+        <a style="text-decoration: none" href="./agb.html"><span class="footerlink"
+            style="color: white">AGBs</span></a></span>
+    </div>
+    <div class="logostempeldiv">
+      <img class="logostempel" src="./img/logo/Hundepension_Logo_Stempel.png" />
+    </div>
+  </div>
+</body>
+
 </html>
