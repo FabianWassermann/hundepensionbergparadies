@@ -1422,3 +1422,23 @@ footer {
     opacity: 1;
     visibility: visible;
 }
+
+a[href^="tel"], 
+a[href^="mailto"] {
+    color: #588c3a !important;
+    text-decoration: none;
+}
+
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+.impressumspan a {
+    color: #588c3a !important;
+    text-decoration: none;
+}
