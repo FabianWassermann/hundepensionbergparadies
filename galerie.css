@@ -1,5 +1,5 @@
 #galerie-wrapper {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 60px;
   width: 90%;
   margin-left: auto;
@@ -9,7 +9,7 @@
 
 @media only screen and (max-width : 1120px) {
   #galerie-wrapper {
-    padding-top: 150px;
+    padding-top: 50px;
   }
 }
 
