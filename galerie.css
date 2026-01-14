@@ -89,6 +89,10 @@
   grid-row-end: 9;
 }
 
+.bildergaleriehandy {
+  display: none;
+}
+
 @media only screen and (max-width : 1200px) {
   .gallery {
     display: none !important;
@@ -111,3 +115,12 @@
 .mySlides1, .mySlides2 {
   transition: opacity 0.5s ease-in-out;
 }
+
+.mscss {
+  display: none;
+}
+
+.mscss.first {
+  display: block;
+}
+

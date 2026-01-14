@@ -1,46 +1,66 @@
-document.addEventListener("DOMContentLoaded", movePictures, true);
+document.addEventListener("DOMContentLoaded", initSlider, true);
 
-var pos = 0;
-var bilder = [];
+let pos = 0;
+let imagePaths = [];
+let preloadCache = []; 
+let isMobile = false;
 
-function movePictures() {
-    let j = 0;
-    for (let i = 1; i <= 2; i++) {
-        if (screen.width > 900) bilder[j] = "./img/homepage-topimg/" + i + "-pc.png";
-        else bilder[j] = "./img/homepage-topimg/" + i + "-handy.png";
-        j++;
-    }
-    setInterval(function () { nextPic(bilder); }, 10000);
+function initSlider() {
+    checkScreenSize();
+
+    generateImagePaths();
+
+    setInterval(nextPic, 10000);
 }
 
-function nextPic(a) {
-    if (screen.width > 900 && bilder[0] === "./img/homepage-topimg/1-handy.png") rePlacer(a, "pc");
-    else if (screen.width <= 900 && bilder[0] === "./img/homepage-topimg/1-pc.png") rePlacer(a, "handy");
-    
-    var refimg = null;
-    if (screen.width > 900) refimg = document.getElementById("refimgpc");
-    else refimg = document.getElementById("refimghandy");
+function checkScreenSize() {
+    isMobile = window.innerWidth <= 900;
+}
 
-    if (refimg && a[pos]) {
-        refimg.style.transition = "opacity 0.8s ease-in-out";
-        refimg.style.opacity = "0";
+function generateImagePaths() {
+    imagePaths = [];
+    preloadCache = []; 
+    
+    const totalImages = 2; 
+    
+    const suffix = isMobile ? "-handy.png" : "-pc.png"; 
+
+    for (let i = 1; i <= totalImages; i++) {
+        const path = "./img/homepage-topimg/" + i + suffix;
+        imagePaths.push(path);
         
-        setTimeout(function() {
-            refimg.setAttribute("src", a[pos]);
-            refimg.style.opacity = "1";
-            pos++;
-            if (pos >= a.length) pos = 0;
-        }, 800);
-    } else {
+        const imgObj = new Image();
+        imgObj.src = path;
+        preloadCache.push(imgObj);
+    }
+}
+
+function nextPic() {
+    const wasMobile = isMobile;
+    checkScreenSize();
+    
+    if (wasMobile !== isMobile) {
+        generateImagePaths();
         pos = 0;
     }
-}
 
-function rePlacer(bilder, handyorpc) {
-    let j = 0;
-    for (let i = 1; i <= 2; i++) {
-        if (screen.width > 900) bilder[j] = "./img/homepage-topimg/" + i + "-pc.png";
-        else bilder[j] = "./img/homepage-topimg/" + i + "-handy.png";
-        j++;
-    }
+    const refImg = isMobile 
+        ? document.getElementById("refimghandy") 
+        : document.getElementById("refimgpc");
+
+    if (!refImg) return;
+
+    pos++;
+    if (pos >= imagePaths.length) pos = 0;
+
+    refImg.style.transition = "opacity 0.8s ease-in-out";
+    refImg.style.opacity = "0";
+
+    setTimeout(function() {
+        refImg.src = imagePaths[pos];
+        
+        requestAnimationFrame(() => {
+            refImg.style.opacity = "1";
+        });
+    }, 800);
 }
