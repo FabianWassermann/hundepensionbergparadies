@@ -3,22 +3,35 @@ document.addEventListener("DOMContentLoaded", holidays, true);
 async function holidays() {
   // Check if popup was already shown today
   const today = new Date().toDateString();
-  const lastShown = localStorage.getItem('holidayPopupLastShown');
+  const lastShown = localStorage.getItem("holidayPopupLastShown");
   
   if (lastShown === today) {
     return; // Already shown today, don't show again
   }
 
-  const doc = await getDoc();
-  console.log(doc.values);
-  if (!doc.values) {
+  let doc;
+  try {
+    doc = await getDoc();
+  } catch (error) {
+    console.error("Holiday data could not be loaded:", error);
+    return;
+  }
+
+  if (!doc || !Array.isArray(doc.values)) {
     return;
   }
 
   const currentDate = new Date();
 
-  document.body.innerHTML += popup;
+  if (!document.getElementById("holidayPopup")) {
+    document.body.insertAdjacentHTML("beforeend", popup);
+  }
+
+  const popupEl = document.getElementById("holidayPopup");
   const rangesDiv = document.getElementById("holidayRanges");
+  if (!popupEl || !rangesDiv) {
+    return;
+  }
   rangesDiv.innerHTML = "";
 
   let hasUpcomingHolidays = false;
@@ -36,21 +49,28 @@ async function holidays() {
     hasUpcomingHolidays = true;
 
     if (!endDate || startDate.getTime() === endDate.getTime()) {
-      rangesDiv.innerHTML += `<div>${startDate.toLocaleString("de-DE", {
+      const rangeItem = document.createElement("div");
+      rangeItem.textContent = startDate.toLocaleString("de-DE", {
         dateStyle: "medium",
-      })}</div>`;
+      });
+      rangesDiv.appendChild(rangeItem);
     } else {
-      rangesDiv.innerHTML += `<div>${startDate.toLocaleString("de-DE", {
+      const rangeItem = document.createElement("div");
+      rangeItem.textContent = `${startDate.toLocaleString("de-DE", {
         dateStyle: "medium",
       })} - ${endDate.toLocaleString("de-DE", {
         dateStyle: "medium",
-      })}</div>`;
+      })}`;
+      rangesDiv.appendChild(rangeItem);
     }
   }
 
-  if (!hasUpcomingHolidays || rangesDiv.innerHTML === "") {
+  if (!hasUpcomingHolidays || rangesDiv.children.length === 0) {
     closeHoliday();
+    return;
   }
+
+  popupEl.style.display = "block";
 }
 
 function getDoc() {
@@ -81,8 +101,11 @@ function getDoc() {
 
 function closeHoliday() {
   const today = new Date().toDateString();
-  localStorage.setItem('holidayPopupLastShown', today);
-  document.getElementById("holidayPopup").style.display = "none";
+  localStorage.setItem("holidayPopupLastShown", today);
+  const popupEl = document.getElementById("holidayPopup");
+  if (popupEl) {
+    popupEl.style.display = "none";
+  }
 }
 
 const popup = `

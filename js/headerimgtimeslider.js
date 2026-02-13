@@ -2,15 +2,22 @@ document.addEventListener("DOMContentLoaded", initSlider, true);
 
 let pos = 0;
 let imagePaths = [];
-let preloadCache = []; 
 let isMobile = false;
+let sliderTimerId = null;
 
 function initSlider() {
     checkScreenSize();
 
     generateImagePaths();
 
-    setInterval(nextPic, 10000);
+    if (imagePaths.length > 1) {
+        preloadImage(imagePaths[1]);
+    }
+
+    if (sliderTimerId) {
+        clearInterval(sliderTimerId);
+    }
+    sliderTimerId = setInterval(nextPic, 10000);
 }
 
 function checkScreenSize() {
@@ -19,7 +26,6 @@ function checkScreenSize() {
 
 function generateImagePaths() {
     imagePaths = [];
-    preloadCache = []; 
     
     const totalImages = 2; 
     
@@ -28,11 +34,14 @@ function generateImagePaths() {
     for (let i = 1; i <= totalImages; i++) {
         const path = "./img/homepage-topimg/" + i + suffix;
         imagePaths.push(path);
-        
-        const imgObj = new Image();
-        imgObj.src = path;
-        preloadCache.push(imgObj);
     }
+}
+
+function preloadImage(path) {
+    if (!path) return;
+
+    const imgObj = new Image();
+    imgObj.src = path;
 }
 
 function nextPic() {
@@ -43,6 +52,8 @@ function nextPic() {
         generateImagePaths();
         pos = 0;
     }
+
+    if (imagePaths.length === 0) return;
 
     const refImg = isMobile 
         ? document.getElementById("refimghandy") 
@@ -58,6 +69,8 @@ function nextPic() {
 
     setTimeout(function() {
         refImg.src = imagePaths[pos];
+        const nextPos = (pos + 1) % imagePaths.length;
+        preloadImage(imagePaths[nextPos]);
         
         requestAnimationFrame(() => {
             refImg.style.opacity = "1";

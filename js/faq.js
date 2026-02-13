@@ -1,5 +1,11 @@
+let faqInitialized = false;
+
 function initFAQ() {
-    // Akkordeon-Funktionalität
+    if (faqInitialized) {
+        return;
+    }
+
+    // Akkordeon-Funktionalitat
     const faqQuestions = document.querySelectorAll('.faq-question');
 
     if (faqQuestions.length === 0) {
@@ -11,12 +17,12 @@ function initFAQ() {
     });
 
     const freshFaqQuestions = document.querySelectorAll('.faq-question');
-    
+
     freshFaqQuestions.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
-            
+
             const faqItem = this.closest('.faq-item');
             const faqAnswer = faqItem.querySelector('.faq-answer');
 
@@ -44,13 +50,13 @@ function initFAQ() {
     const faqSections = document.querySelectorAll('.faq-section');
 
     if (searchInput) {
-        searchInput.addEventListener('input', function(e) {
+        searchInput.addEventListener('input', function (e) {
             const searchTerm = e.target.value.toLowerCase().trim();
 
             faqItems.forEach(item => {
                 const questionEl = item.querySelector('.faq-question h3');
                 const answerEl = item.querySelector('.faq-answer p');
-                
+
                 const questionText = questionEl ? questionEl.textContent.toLowerCase() : '';
                 const answerText = answerEl ? answerEl.textContent.toLowerCase() : '';
 
@@ -63,7 +69,7 @@ function initFAQ() {
 
             faqSections.forEach(section => {
                 const hasGeneralInfo = section.querySelector('.general-info-block');
-                
+
                 let visibleCount = 0;
                 section.querySelectorAll('.faq-item').forEach(item => {
                     if (item.style.display !== 'none') {
@@ -83,6 +89,8 @@ function initFAQ() {
             });
         });
     }
+
+    faqInitialized = true;
 }
 
 if (document.readyState === 'loading') {
@@ -90,5 +98,3 @@ if (document.readyState === 'loading') {
 } else {
     initFAQ();
 }
-
-window.addEventListener('load', initFAQ);
