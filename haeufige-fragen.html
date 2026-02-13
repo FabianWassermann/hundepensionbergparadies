@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Häufige Fragen | Hundepension-Bergparadies</title>
 
     <link rel="stylesheet" href="style.css?v=1">
@@ -23,9 +26,9 @@
         href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&family=Titillium+Web:wght@300&display=swap"
         rel="stylesheet">
 
-    <script src="./js/headerimgtimeslider.js"></script>
-    <script src="./js/holidays.js"></script>
-    <script src="./js/faq.js"></script>
+    <script src="./js/headerimgtimeslider.js" defer></script>
+    <script src="./js/holidays.js" defer></script>
+    <script src="./js/faq.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4EBWZ3GVJ"></script>
@@ -40,15 +43,15 @@
 
 <body>
     <header>
-        <img id="refimgpc" class="headerimgpc" src="./img/homepage-topimg/1-pc.png">
-        <img id="refimghandy" class="headerimghandy" src="./img/homepage-topimg/1-handy.png">
-        <div class="logoheaderdiv"><img class="logoheader" src="./img/logo/Logo-Bergparadies-NoBackground.png"></div>
+        <img decoding="async" fetchpriority="high" id="refimgpc" class="headerimgpc" src="./img/homepage-topimg/1-pc.webp">
+        <img decoding="async" fetchpriority="high" id="refimghandy" class="headerimghandy" src="./img/homepage-topimg/1-handy.webp">
+        <div class="logoheaderdiv"><img decoding="async" loading="eager" class="logoheader" src="./img/logo/Logo-Bergparadies-NoBackground.webp"></div>
 
     </header>
     <nav id="navhandy">
         <div id="menuToggle">
             <input type="checkbox" />
-            <img class="navlogo" src="./img/logo/Logo-Bergparadies-NoBackground.png" alt="Logo" />
+            <img decoding="async" loading="eager" class="navlogo" src="./img/logo/Logo-Bergparadies-NoBackground.webp" alt="Logo" />
             <span class="navspan"></span>
             <span class="navspan"></span>
             <span class="navspan"></span>
@@ -355,7 +358,7 @@
 
             </article>
             <aside>
-                <div class="logoasidediv"><img class="logoaside" src="./img/logo/Logo-Bergparadies-NoBackground.png">
+                <div class="logoasidediv"><img decoding="async" loading="lazy" class="logoaside" src="./img/logo/Logo-Bergparadies-NoBackground.webp">
                 </div>
                 <div class="contactaside">
                     <div class="anschriftdiv"><span class="anschrift">H&uuml;hnersberg 58</span></div>
@@ -394,7 +397,7 @@
             </div>
         </div>
         <div class="footerwhite">
-            <div class="footerdogimgdiv"><img class="footerdogimg" src="./img/footer/dog-footer-nobackground.png"></div>
+            <div class="footerdogimgdiv"><img decoding="async" loading="lazy" class="footerdogimg" src="./img/footer/dog-footer-nobackground.webp"></div>
             <div class="footermiddlediv"></div>
             <div class="footerrightdiv"></div>
         </div>
@@ -407,7 +410,7 @@
                 | <a style="text-decoration:none;" href="./copyright.html"><span class="footerlink"
                         style="color: white;">COPYRIGHT</span></a> | <a style="text-decoration:none;"
                     href="./agb.html"><span class="footerlink" style="color: white;">AGBs</span></a></span></div>
-        <div class="logostempeldiv"><img class="logostempel" src="./img/logo/Hundepension_Logo_Stempel.png"></div>
+        <div class="logostempeldiv"><img decoding="async" loading="lazy" class="logostempel" src="./img/logo/Hundepension_Logo_Stempel.webp"></div>
     </div>
 </body>
 

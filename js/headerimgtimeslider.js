@@ -29,7 +29,7 @@ function generateImagePaths() {
     
     const totalImages = 2; 
     
-    const suffix = isMobile ? "-handy.png" : "-pc.png"; 
+    const suffix = isMobile ? "-handy.webp" : "-pc.webp"; 
 
     for (let i = 1; i <= totalImages; i++) {
         const path = "./img/homepage-topimg/" + i + suffix;

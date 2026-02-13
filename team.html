@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Ein hervorragendes Team | Hundepension-Bergparadies</title>
 
     <link rel="stylesheet" href="style.css?v=1" />
@@ -38,9 +41,9 @@
       rel="stylesheet"
     />
 
-    <script src="./js/headerimgtimeslider.js"></script>
-    <script src="./js/mehrlesen.js"></script>
-    <script src="./js/holidays.js"></script>
+    <script src="./js/headerimgtimeslider.js" defer></script>
+    <script src="./js/mehrlesen.js" defer></script>
+    <script src="./js/holidays.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -60,27 +63,27 @@
 
   <body>
     <header>
-      <img
+      <img decoding="async" fetchpriority="high"
         id="refimgpc"
         class="headerimgpc"
-        src="./img/homepage-topimg/1-pc.png"
+        src="./img/homepage-topimg/1-pc.webp"
       />
-      <img
+      <img decoding="async" fetchpriority="high"
         id="refimghandy"
         class="headerimghandy"
-        src="./img/homepage-topimg/1-handy.png"
+        src="./img/homepage-topimg/1-handy.webp"
       />
       <div class="logoheaderdiv">
-        <img
+        <img decoding="async" loading="eager"
           class="logoheader"
-          src="./img/logo/Logo-Bergparadies-NoBackground.png"
+          src="./img/logo/Logo-Bergparadies-NoBackground.webp"
         />
       </div>
     </header>
     <nav id="navhandy">
       <div id="menuToggle">
         <input type="checkbox" />
-        <img class="navlogo" src="./img/logo/Logo-Bergparadies-NoBackground.png" alt="Logo" />
+        <img decoding="async" loading="eager" class="navlogo" src="./img/logo/Logo-Bergparadies-NoBackground.webp" alt="Logo" />
         <span class="navspan"></span>
         <span class="navspan"></span>
         <span class="navspan"></span>
@@ -134,7 +137,7 @@
 
           <div class="team1">
             <div class="roundimgdiv1">
-              <img class="roundimg1" src="./img/portrait/michi.jpg" />
+              <img decoding="async" loading="lazy" class="roundimg1" src="./img/portrait/michi.webp" />
             </div>
 
             <div class="persontext1" id="wenigerlesenteam1">
@@ -232,18 +235,18 @@
               </div>
             </div>
             <div class="roundimgdiv2">
-              <img
+              <img decoding="async" loading="lazy"
                 class="roundimg2"
-                src="./img/portrait/luna.png"
+                src="./img/portrait/luna.webp"
               />
             </div>
           </div>
 
           <div class="team2handy">
             <div class="roundimgdiv2">
-              <img
+              <img decoding="async" loading="lazy"
                 class="roundimg1"
-                src="./img/portrait/luna.png"
+                src="./img/portrait/luna.webp"
               />
             </div>
             <div class="persontext2">
@@ -276,9 +279,9 @@
 
           <div class="team3">
             <div class="roundimgdiv3">
-              <img
+              <img decoding="async" loading="lazy"
                 class="roundimg3"
-                src="./img/portrait/Screenshot_20200914_153345.png"
+                src="./img/portrait/Screenshot_20200914_153345.webp"
               />
             </div>
             <div class="persontext3" id="wenigerlesenteam3">
@@ -330,9 +333,9 @@
         </article>
         <aside>
           <div class="logoasidediv">
-            <img
+            <img decoding="async" loading="lazy"
               class="logoaside"
-              src="./img/logo/Logo-Bergparadies-NoBackground.png"
+              src="./img/logo/Logo-Bergparadies-NoBackground.webp"
             />
           </div>
           <div class="contactaside">
@@ -423,9 +426,9 @@
       </div>
       <div class="footerwhite">
         <div class="footerdogimgdiv">
-          <img
+          <img decoding="async" loading="lazy"
             class="footerdogimg"
-            src="./img/footer/dog-footer-nobackground.png"
+            src="./img/footer/dog-footer-nobackground.webp"
           />
         </div>
         <div class="footermiddlediv"></div>
@@ -461,9 +464,9 @@
         >
       </div>
       <div class="logostempeldiv">
-        <img
+        <img decoding="async" loading="lazy"
           class="logostempel"
-          src="./img/logo/Hundepension_Logo_Stempel.png"
+          src="./img/logo/Hundepension_Logo_Stempel.webp"
         />
       </div>
     </div>

@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Preise | Hundepension-Bergparadies</title>
 
     <link rel="stylesheet" href="style.css?v=1" />
@@ -38,8 +41,8 @@
       rel="stylesheet"
     />
 
-    <script src="./js/headerimgtimeslider.js"></script>
-    <script src="./js/holidays.js"></script>
+    <script src="./js/headerimgtimeslider.js" defer></script>
+    <script src="./js/holidays.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -59,27 +62,27 @@
 
   <body>
     <header>
-      <img
+      <img decoding="async" fetchpriority="high"
         id="refimgpc"
         class="headerimgpc"
-        src="./img/homepage-topimg/1-pc.png"
+        src="./img/homepage-topimg/1-pc.webp"
       />
-      <img
+      <img decoding="async" fetchpriority="high"
         id="refimghandy"
         class="headerimghandy"
-        src="./img/homepage-topimg/1-handy.png"
+        src="./img/homepage-topimg/1-handy.webp"
       />
       <div class="logoheaderdiv">
-        <img
+        <img decoding="async" loading="eager"
           class="logoheader"
-          src="./img/logo/Logo-Bergparadies-NoBackground.png"
+          src="./img/logo/Logo-Bergparadies-NoBackground.webp"
         />
       </div>
     </header>
     <nav id="navhandy">
       <div id="menuToggle">
         <input type="checkbox" />
-        <img class="navlogo" src="./img/logo/Logo-Bergparadies-NoBackground.png" alt="Logo" />
+        <img decoding="async" loading="eager" class="navlogo" src="./img/logo/Logo-Bergparadies-NoBackground.webp" alt="Logo" />
         <span class="navspan"></span>
         <span class="navspan"></span>
         <span class="navspan"></span>
@@ -123,18 +126,18 @@
             <h3 class="secondtitle">stand Oktober 2025</h3>
           </div>
           <div class="preisimagediv">
-            <img
-              src="./img/preisliste/preisliste2025.jpeg"
+            <img decoding="async" loading="lazy"
+              src="./img/preisliste/preisliste2025.webp"
               class="preislisteimg"
-              onclick="window.open('./img/preisliste/preisliste2025.jpeg');"
+              onclick="window.open('./img/preisliste/preisliste2025.webp');"
             />
           </div>
         </article>
         <aside>
           <div class="logoasidediv">
-            <img
+            <img decoding="async" loading="lazy"
               class="logoaside"
-              src="./img/logo/Logo-Bergparadies-NoBackground.png"
+              src="./img/logo/Logo-Bergparadies-NoBackground.webp"
             />
           </div>
           <div class="contactaside">
@@ -225,9 +228,9 @@
       </div>
       <div class="footerwhite">
         <div class="footerdogimgdiv">
-          <img
+          <img decoding="async" loading="lazy"
             class="footerdogimg"
-            src="./img/footer/dog-footer-nobackground.png"
+            src="./img/footer/dog-footer-nobackground.webp"
           />
         </div>
         <div class="footermiddlediv"></div>
@@ -263,9 +266,9 @@
         >
       </div>
       <div class="logostempeldiv">
-        <img
+        <img decoding="async" loading="lazy"
           class="logostempel"
-          src="./img/logo/Hundepension_Logo_Stempel.png"
+          src="./img/logo/Hundepension_Logo_Stempel.webp"
         />
       </div>
     </div>

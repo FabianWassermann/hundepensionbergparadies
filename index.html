@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Hundepension-Bergparadies</title>
 
     <link rel="stylesheet" href="style.css?v=2" />
@@ -37,9 +40,9 @@
       rel="stylesheet"
     />
 
-    <script src="./js/headerimgtimeslider.js"></script>
-    <script src="./js/imgslider.js"></script>
-    <script src="./js/holidays.js"></script>
+    <script src="./js/headerimgtimeslider.js" defer></script>
+    <script src="./js/imgslider.js" defer></script>
+    <script src="./js/holidays.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -59,27 +62,27 @@
 
   <body>
     <header>
-      <img
+      <img decoding="async" fetchpriority="high"
         id="refimgpc"
         class="headerimgpc"
-        src="./img/homepage-topimg/1-pc.png"
+        src="./img/homepage-topimg/1-pc.webp"
       />
-      <img
+      <img decoding="async" fetchpriority="high"
         id="refimghandy"
         class="headerimghandy"
-        src="./img/homepage-topimg/1-handy.png"
+        src="./img/homepage-topimg/1-handy.webp"
       />
       <div class="logoheaderdiv">
-        <img
+        <img decoding="async" loading="eager"
           class="logoheader"
-          src="./img/logo/Logo-Bergparadies-NoBackground.png"
+          src="./img/logo/Logo-Bergparadies-NoBackground.webp"
         />
       </div>
     </header>
     <nav id="navhandy">
       <div id="menuToggle">
         <input type="checkbox" />
-        <img class="navlogo" src="./img/logo/Logo-Bergparadies-NoBackground.png" alt="Logo" />
+        <img decoding="async" loading="eager" class="navlogo" src="./img/logo/Logo-Bergparadies-NoBackground.webp" alt="Logo" />
         <span class="navspan"></span>
         <span class="navspan"></span>
         <span class="navspan"></span>
@@ -123,7 +126,7 @@
             <h3 class="secondtitle">seit 10.September 2020</h3>
           </div>
           <div class="youtubevideo">
-            <iframe
+            <iframe loading="lazy"
               width="661px"
               height="372px"
               class="iframeyt"
@@ -178,9 +181,9 @@
         </article>
         <aside>
           <div class="logoasidediv">
-            <img
+            <img decoding="async" loading="lazy"
               class="logoaside"
-              src="./img/logo/Logo-Bergparadies-NoBackground.png"
+              src="./img/logo/Logo-Bergparadies-NoBackground.webp"
             />
           </div>
           <div class="contactaside">
@@ -247,92 +250,92 @@
     <div id="trennwand"></div>
     <div class="conentindexcolor">
       <div id="bildergaleriepc">
-        <img
+        <img decoding="async" loading="lazy"
           class="galeriebild"
-          src="./img/bildergalerie/IMG_20210505_105320_132.jpg"
-          onclick="window.open('./img/bildergalerie/IMG_20210505_105320_132.jpg');"
+          src="./img/bildergalerie/IMG_20210505_105320_132.webp"
+          onclick="window.open('./img/bildergalerie/IMG_20210505_105320_132.webp');"
         />
-        <img
+        <img decoding="async" loading="lazy"
           class="galeriebild"
-          src="./img/bildergalerie/IMG_20210522_093024_133.jpg"
-          onclick="window.open('./img/bildergalerie/IMG_20210522_093024_133.jpg');"
+          src="./img/bildergalerie/IMG_20210522_093024_133.webp"
+          onclick="window.open('./img/bildergalerie/IMG_20210522_093024_133.webp');"
         />
-        <img
+        <img decoding="async" loading="lazy"
           class="galeriebild"
-          src="./img/bildergalerie/IMG_20210531_124136_045.jpg"
-          onclick="window.open('./img/bildergalerie/IMG_20210531_124136_045.jpg');"
+          src="./img/bildergalerie/IMG_20210531_124136_045.webp"
+          onclick="window.open('./img/bildergalerie/IMG_20210531_124136_045.webp');"
         />
-        <img
+        <img decoding="async" loading="lazy"
           class="galeriebild"
-          src="./img/bildergalerie/IMG_20210618_114508_082.jpg"
-          onclick="window.open('./img/bildergalerie/IMG_20210618_114508_082.jpg');"
+          src="./img/bildergalerie/IMG_20210618_114508_082.webp"
+          onclick="window.open('./img/bildergalerie/IMG_20210618_114508_082.webp');"
         />
-        <img
+        <img decoding="async" loading="lazy"
           class="galeriebild"
-          src="./img/bildergalerie/IMG_20210718_112811_037_edit_578399183515388.jpg"
-          onclick="window.open('./img/bildergalerie/IMG_20210718_112811_037_edit_578399183515388.jpg');"
+          src="./img/bildergalerie/IMG_20210718_112811_037_edit_578399183515388.webp"
+          onclick="window.open('./img/bildergalerie/IMG_20210718_112811_037_edit_578399183515388.webp');"
         />
-        <img
+        <img decoding="async" loading="lazy"
           class="galeriebild"
-          src="./img/bildergalerie/IMG_20210726_063552_051_edit_817414227160688.jpg"
-          onclick="window.open('./img/bildergalerie/IMG_20210726_063552_051_edit_817414227160688.jpg');"
+          src="./img/bildergalerie/IMG_20210726_063552_051_edit_817414227160688.webp"
+          onclick="window.open('./img/bildergalerie/IMG_20210726_063552_051_edit_817414227160688.webp');"
         />
-        <img
+        <img decoding="async" loading="lazy"
           class="galeriebild"
-          src="./img/bildergalerie/IMG_20210726_130702_016_edit_670752834101294.jpg"
-          onclick="window.open('./img/bildergalerie/IMG_20210726_130702_016_edit_670752834101294.jpg');"
+          src="./img/bildergalerie/IMG_20210726_130702_016_edit_670752834101294.webp"
+          onclick="window.open('./img/bildergalerie/IMG_20210726_130702_016_edit_670752834101294.webp');"
         />
-        <img
+        <img decoding="async" loading="lazy"
           class="galeriebild"
-          src="./img/bildergalerie/IMG_20210726_133725_045_edit_606044939551793.jpg"
-          onclick="window.open('./img/bildergalerie/IMG_20210726_133725_045_edit_606044939551793.jpg');"
+          src="./img/bildergalerie/IMG_20210726_133725_045_edit_606044939551793.webp"
+          onclick="window.open('./img/bildergalerie/IMG_20210726_133725_045_edit_606044939551793.webp');"
         />
-        <img
+        <img decoding="async" loading="lazy"
           class="galeriebild"
-          src="./img/bildergalerie/IMG_20210819_085547_006_edit_201626763684857.jpg"
-          onclick="window.open('./img/bildergalerie/IMG_20210819_085547_006_edit_201626763684857.jpg');"
+          src="./img/bildergalerie/IMG_20210819_085547_006_edit_201626763684857.webp"
+          onclick="window.open('./img/bildergalerie/IMG_20210819_085547_006_edit_201626763684857.webp');"
         />
       </div>
       <div id="bildergaleriehandy">
         <div class="w3-content w3-display-container" style="max-width: 80%">
-          <img
+          <img decoding="async" loading="lazy"
             class="mySlides first"
-            src="./img/bildergalerie/IMG_20210505_105320_132.jpg"
+            src="./img/bildergalerie/IMG_20210505_105320_132.webp"
             style="width: 100%; height: 100%"
           />
-          <img
+          <img decoding="async" loading="lazy"
             class="mySlides"
-            src="./img/bildergalerie/IMG_20210522_093024_133.jpg"
+            src="./img/bildergalerie/IMG_20210522_093024_133.webp"
             style="width: 100%; height: 100%"
           />
-          <img
+          <img decoding="async" loading="lazy"
             class="mySlides"
-            src="./img/bildergalerie/IMG_20210531_124136_045.jpg"
+            src="./img/bildergalerie/IMG_20210531_124136_045.webp"
             style="width: 100%; height: 100%"
           />
-          <img
+          <img decoding="async" loading="lazy"
             class="mySlides"
-            src="./img/bildergalerie/IMG_20210618_114508_082.jpg"
+            src="./img/bildergalerie/IMG_20210618_114508_082.webp"
             style="width: 100%; height: 100%"
           />
-          <img
+          <img decoding="async" loading="lazy"
             class="mySlides"
-            src="./img/bildergalerie/IMG_20210718_112811_037_edit_578399183515388.jpg"
+            src="./img/bildergalerie/IMG_20210718_112811_037_edit_578399183515388.webp"
             style="width: 100%; height: 100%"
           />
-          <img
+          <img decoding="async" loading="lazy"
             class="mySlides"
-            src="./img/bildergalerie/IMG_20210726_063552_051_edit_817414227160688.jpg"
+            src="./img/bildergalerie/IMG_20210726_063552_051_edit_817414227160688.webp"
             style="width: 100%; height: 100%"
           />
-          <img
+          <img decoding="async" loading="lazy"
             class="mySlides"
-            src="./img/bildergalerie/IMG_20210726_130702_016_edit_670752834101294.jpg"
+            src="./img/bildergalerie/IMG_20210726_130702_016_edit_670752834101294.webp"
             style="width: 100%; height: 100%"
           />
-          <img
+          <img decoding="async" loading="lazy"
             class="mySlides"
-            src="./img/bildergalerie/IMG_20210726_133725_045_edit_606044939551793.jpg"
+            src="./img/bildergalerie/IMG_20210726_133725_045_edit_606044939551793.webp"
             style="width: 100%; height: 100%"
           />
           <div
@@ -409,9 +412,9 @@
       </div>
       <div class="footerwhite">
         <div class="footerdogimgdiv">
-          <img
+          <img decoding="async" loading="lazy"
             class="footerdogimg"
-            src="./img/footer/dog-footer-nobackground.png"
+            src="./img/footer/dog-footer-nobackground.webp"
           />
         </div>
         <div class="footermiddlediv"></div>
@@ -447,9 +450,9 @@
         >
       </div>
       <div class="logostempeldiv">
-        <img
+        <img decoding="async" loading="lazy"
           class="logostempel"
-          src="./img/logo/Hundepension_Logo_Stempel.png"
+          src="./img/logo/Hundepension_Logo_Stempel.webp"
         />
       </div>
     </div>
