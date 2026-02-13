@@ -7,10 +7,7 @@ function initSlider() {
   var x = document.getElementsByClassName("mySlides");
   if (x.length === 0) return;
   
-  var dots = document.getElementsByClassName("demo");
-  if (dots.length > 0) {
-    dots[0].className += " w3-white";
-  }
+  showDivs(slideIndex);
 }
 
 function plusDivs(n) {
@@ -37,9 +34,11 @@ function showDivs(n) {
   
   for (i = 0; i < x.length; i++) {
     x[i].style.opacity = "0";
-    if (x[i].classList.contains("first") && (slideIndex - 1) !== 0) {
-      x[i].style.position = "absolute";
-    }
+    x[i].style.position = "absolute";
+    x[i].style.top = "0";
+    x[i].style.left = "0";
+    x[i].style.width = "100%";
+    x[i].style.display = "block";
   }
   
   for (i = 0; i < dots.length; i++) {

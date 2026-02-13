@@ -124,3 +124,46 @@
   display: block;
 }
 
+@media only screen and (max-width : 1200px) {
+  #bildergaleriehandy1 .w3-content.w3-display-container,
+  #bildergaleriehandy2 .w3-content.w3-display-container {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    background-color: #000;
+  }
+
+  #bildergaleriehandy1 .mscss,
+  #bildergaleriehandy2 .mscss {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #bildergaleriehandy1 .w3-display-bottommiddle,
+  #bildergaleriehandy2 .w3-display-bottommiddle {
+    bottom: 12px;
+    width: calc(100% - 16px) !important;
+    margin: 0;
+    padding: 8px;
+    gap: 6px;
+    z-index: 3;
+  }
+
+  #bildergaleriehandy1 .w3-left,
+  #bildergaleriehandy1 .w3-right,
+  #bildergaleriehandy2 .w3-left,
+  #bildergaleriehandy2 .w3-right {
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+
+  #bildergaleriehandy1 .w3-badge,
+  #bildergaleriehandy2 .w3-badge {
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+  }
+}
+
